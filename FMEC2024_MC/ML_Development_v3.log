@@ -1,0 +1,63 @@
+2024-07-28 16:39:57,485 - INFO - ML development is started.
+2024-07-28 16:39:57,485 - INFO - Loading the engineered dataset from ../ds/
+2024-07-28 16:39:58,607 - INFO - Dataset columns name: Index(['IQ_RE_Mean', 'IQ_RE_Min', 'IQ_RE_Max', 'IQ_RE_Median', 'IQ_RE_StdDev',
+       'IQ_RE_Skewness', 'IQ_RE_Kurtosis', 'IQ_RE_PeakCount', 'IQ_RE_RMS',
+       'IQ_RE_Autocorr', 'IQ_RE_ZeroCrossings', 'IQ_RE_Entropy',
+       'IQ_RE_DominantFreq', 'IQ_RE_FreqVariance', 'IQ_RE_SpectralEntropy',
+       'IQ_RE_SpectralCentroid', 'IQ_RE_SpectralFlatness',
+       'IQ_RE_FreqBandPower', 'IQ_IM_Mean', 'IQ_IM_Min', 'IQ_IM_Max',
+       'IQ_IM_Median', 'IQ_IM_StdDev', 'IQ_IM_Skewness', 'IQ_IM_Kurtosis',
+       'IQ_IM_PeakCount', 'IQ_IM_RMS', 'IQ_IM_Autocorr', 'IQ_IM_ZeroCrossings',
+       'IQ_IM_Entropy', 'IQ_IM_DominantFreq', 'IQ_IM_FreqVariance',
+       'IQ_IM_SpectralEntropy', 'IQ_IM_SpectralCentroid',
+       'IQ_IM_SpectralFlatness', 'IQ_IM_FreqBandPower', 'Spec_RE_Mean',
+       'Spec_RE_Min', 'Spec_RE_Max', 'Spec_RE_Median', 'Spec_RE_StdDev',
+       'Spec_RE_Skewness', 'Spec_RE_Kurtosis', 'Spec_RE_PeakCount',
+       'Spec_RE_RMS', 'Spec_RE_Autocorr', 'Spec_RE_ZeroCrossings',
+       'Spec_RE_Entropy', 'Spec_RE_DominantFreq', 'Spec_RE_FreqVariance',
+       'Spec_RE_SpectralEntropy', 'Spec_RE_SpectralCentroid',
+       'Spec_RE_SpectralFlatness', 'Spec_RE_FreqBandPower', 'Spec_IM_Mean',
+       'Spec_IM_Min', 'Spec_IM_Max', 'Spec_IM_Median', 'Spec_IM_StdDev',
+       'Spec_IM_Skewness', 'Spec_IM_Kurtosis', 'Spec_IM_PeakCount',
+       'Spec_IM_RMS', 'Spec_IM_Autocorr', 'Spec_IM_ZeroCrossings',
+       'Spec_IM_Entropy', 'Spec_IM_DominantFreq', 'Spec_IM_FreqVariance',
+       'Spec_IM_SpectralEntropy', 'Spec_IM_SpectralCentroid',
+       'Spec_IM_SpectralFlatness', 'Spec_IM_FreqBandPower', 'SNR',
+       'Duty_Cycle', 'Class'],
+      dtype='object')
+2024-07-28 16:39:58,613 - INFO - Class count: Class
+Noise        52552
+Taranis      16546
+Turnigy      10333
+FutabaT14     6938
+Graupner      6481
+FutabaT7      3661
+DJI           2194
+Name: count, dtype: int64
+2024-07-28 16:39:58,613 - INFO - Dataset shape: (98705, 75)
+2024-07-28 16:39:58,613 - INFO - Prepare the multi-class classification dataset (Drone Types)
+2024-07-28 16:39:58,614 - INFO - Remove the Noise Class to keep only the drone classes
+2024-07-28 16:39:58,658 - INFO - Classification pipeline is started (Multi-class - Drone Type)
+2024-07-28 16:40:06,111 - INFO - Class distribution after the data preparation stage:
+Train: 
+Class
+4    11582
+5     7233
+1     4856
+3     4537
+2     2563
+0     1536
+Name: count, dtype: int64
+Test: 
+Class
+4    4964
+5    3100
+1    2082
+3    1944
+2    1098
+0     658
+Name: count, dtype: int64
+2024-07-28 16:40:06,112 - INFO - Compare a baseline models using CV, and select the 10 top performing ones, sorted by F1
+2024-07-28 18:21:08,390 - INFO - Classification pipeline is Completed (Multi-class - Drone Type)
+
+2024-07-28 18:21:08,701 - INFO - ML development pipeline is completed.
